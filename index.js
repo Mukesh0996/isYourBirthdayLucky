@@ -6,7 +6,7 @@ let obj = {};
 submitBtn.addEventListener("click",(e) => {
     e.preventDefault();
     const formData = new FormData(birthdayForm);
-    for(let fields of formData.entries()) {
+    for(let fields of formData) {
         const [label, value] = fields;
        obj = {
            ...obj,

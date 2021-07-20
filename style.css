@@ -19,17 +19,28 @@ body {
     font-family: "Roboto";
 }
 
-.main {
 
+.main {
+    position: relative;
     width: 30rem;
     padding: 1rem;
     margin: 0 auto;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
     z-index:2;
     height: 100vh;
 }
-
+.privacy {
+    position: fixed;
+    width: 20rem;
+    top: 10px;
+    right: 0px;
+    background: #ccc;
+    border-radius: 4px;
+    padding: 1rem;
+    text-align: justify;
+    font-style: italic;
+}
 .main_title {
     background: #FCD34D;
     position: relative;
@@ -88,4 +99,27 @@ button[type="submit"] {
 }
 button[type="submit"]:hover {
     cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background: #FCD34D;
+    text-align: center;
+    z-index: 1000;
+}
+.footer_header {
+    margin: 1rem 0;
+    color: white;
+    font-size: 20px;
+}
+.list-item-inline{
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 40px;
+
+}
+i {
+    color: white;
 }
