@@ -2,6 +2,7 @@ const birthdayForm = document.getElementById('birthdayForm');
 const submitBtn = document.querySelector('button[type="submit"]');
 const output = document.getElementsByClassName("output")[0];
 
+
 let obj = {};
 let happyUrl = "/undraw_partying_p92d.svg";
 let sadUrl = "/undraw_feeling_blue_4b7q.svg"
@@ -30,12 +31,12 @@ const calculate = (obj) => {
     }
     
     if(sum % number === 0) {
-        output.style ="display:none";
+        console.log("exec");
         output.style = "display: flex";
         output.children[0].src = happyUrl;
         output.children[1].innerText="Hurray, Your Birthday date is a lucky date..."
     } else {
-        output.style ="display:none";
+       
         output.style = "display:flex";
         output.children[0].src = sadUrl;
         output.children[1].innerText="Oops.., Your Birthday date is not a lucky date..."
