@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+body {
+    height: 100vh;
+    background: url(./undraw_Birthday_cake_2wxy.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+    font-family: "Roboto";
+}
+
+.main {
+
+    width: 30rem;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    z-index:2;
+    height: 100vh;
+}
+
+.main_title {
+    background: #FCD34D;
+    position: relative;
+    top: 20rem;
+    padding: .5rem;
+    border-radius: 5px;
+    z-index:10;    
+}
+
+.main_title h1 {
+    margin: 1rem 0;
+    font-size: 30px;
+}
+
+#birthday {
+    position: relative;
+    top: 60rem;
+    min-height: 100vh;
+    max-width: 30rem;
+    background:#FCD34D;
+    padding: 1rem;
+    text-align: center;
+}
+#birthday > h1 {
+    margin: 1rem 0;
+} 
+
+#birthdayForm {
+    width: 100%;
+    padding: .5rem;
+}
+
+ label,  input {
+    margin: 1rem 0;
+    display: block;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+   font-size: 20px;
+}
+ input {
+    padding: .5rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button[type="submit"] {
+    padding: .5rem .7rem;
+    border-radius: 5px;
+    border: 1px solid #ca9298;
+    background: #ca9298;
+    color: white;
+    font: inherit;
+}
+button[type="submit"]:hover {
+    cursor: pointer;
+}
