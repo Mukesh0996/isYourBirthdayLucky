@@ -1,7 +1,10 @@
 const birthdayForm = document.getElementById('birthdayForm');
 const submitBtn = document.querySelector('button[type="submit"]');
+const output = document.getElementsByClassName("output")[0];
 
 let obj = {};
+let happyUrl = "/undraw_partying_p92d.svg";
+let sadUrl = "/undraw_feeling_blue_4b7q.svg"
 
 submitBtn.addEventListener("click",(e) => {
     e.preventDefault();
@@ -14,21 +17,27 @@ submitBtn.addEventListener("click",(e) => {
        }
     }
     calculate(obj);
-})
+});
 
 const calculate = (obj) => {
     let bDate = Number(obj.birthdaydate.split("-").join("")), number = Number(obj.luckNum);
     let sum = 0;
-    console.log(bDate, number);
+
     while( bDate > 0 ) {
         let lastDigit = bDate % 10;
         sum = sum + lastDigit;
         bDate = Math.trunc(bDate/10);
     }
-    console.log(sum, number);
+    
     if(sum % number === 0) {
-        console.log("lucky")
+        output.style ="display:none";
+        output.style = "display: flex";
+        output.children[0].src = happyUrl;
+        output.children[1].innerText="Hurray, Your Birthday date is a lucky date..."
     } else {
-        console.log("not lucky");
+        output.style ="display:none";
+        output.style = "display:flex";
+        output.children[0].src = sadUrl;
+        output.children[1].innerText="Oops.., Your Birthday date is not a lucky date..."
     }
 }

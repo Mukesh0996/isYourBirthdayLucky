@@ -101,6 +101,11 @@ button[type="submit"]:hover {
     cursor: pointer;
 }
 
+.output {
+    display: none;
+    flex-direction: column;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
